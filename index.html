@@ -3,72 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motivational Page</title>
+    <title>Motivational Page for Friend</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f0f0f0;
             text-align: center;
+            padding: 50px;
         }
         .container {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
             background-color: #fff;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            max-width: 600px;
         }
-        .quote {
-            font-size: 24px;
-            font-style: italic;
+        .title {
+            font-size: 36px;
             color: #333;
-            margin: 20px 0;
+            margin-bottom: 20px;
         }
-        .personal-message {
-            font-size: 18px;
+        .subtitle {
+            font-size: 24px;
             color: #555;
-            margin: 20px 0;
+            margin-bottom: 40px;
         }
-        .goals {
-            font-size: 20px;
-            color: #444;
-            margin: 20px 0;
+        .button {
+            font-size: 18px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007acc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .media {
-            margin: 20px 0;
-        }
-        .cta {
-            font-size: 22px;
-            color: #007acc;
-            margin: 20px 0;
+        .video-container {
+            display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hello, [Friend's Name]!</h1>
-        <div class="quote">"The only way to achieve the impossible is to believe it is possible." - Charles Kingsleigh</div>
-        <div class="personal-message">
-            Dear [Friend's Name], <br>
-            You have always been an inspiration to me. Your dedication and passion are truly admirable. Remember, every step you take, no matter how small, brings you closer to your dreams.
-        </div>
-        <div class="goals">
-            <h2>Your Goals and Achievements</h2>
-            <ul>
-                <li>Completed [goal/achievement 1]</li>
-                <li>Achieved [goal/achievement 2]</li>
-                <li>Working on [goal/achievement 3]</li>
-            </ul>
-        </div>
-        <div class="media">
-            <h2>Here’s something to brighten your day:</h2>
-            <!-- Embed a motivational video or image gallery here -->
-        </div>
-        <div class="cta">
-            Keep pushing forward, and remember that you are capable of amazing things!
+        <div class="title">Hi Friend</div>
+        <div class="subtitle">I hear you like hot nerds</div>
+        <button class="button" onclick="showVideo()">Tap</button>
+        <div class="video-container" id="videoContainer">
+            <video width="560" height="315" controls>
+                <source src="your-video-file.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
+
+    <script>
+        function showVideo() {
+            document.getElementById('videoContainer').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
